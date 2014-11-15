@@ -2,7 +2,7 @@ words = {
   "nouns" : ["ambience", "service", "staff", "restaurant", "appearance"],
   1 : {
     "food" : ["meh", "okay", "edible", "just alright"],
-    "service" : ["respectable", "", "pretty good", "bearable"],
+    "service" : ["respectable", "so-so", "pretty good", "bearable"],
     "other" : ["satisfactory", "fine", "alright", "acceptable"]
   },
   2 : {
