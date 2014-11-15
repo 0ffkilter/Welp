@@ -28,6 +28,51 @@ class cached(object):
             return response
         return decorator
 
+def reducer(eateries): #list of dictionaries, cuts it down to the most mediocre three restaurants for that category
+	p = len(eateries)
+
+	eateries.sort(key=operator.itemgetter('rating'))
+	x = p
+	while x > 3:
+		eateries = eateries[:-1]
+		x = len(eateries)
+	else:
+		return eateries
+
+
+def get_search_parameters(lat, long, foods):
+	params = {}
+	params["term"] = "restaurants"
+	params["ll"] = "{},{}".format(str(lat), str(long))
+	params["radius_filter"] = "40000"
+	params["limit"] = "20"
+	params["offset"] = "30"
+	params["sort"] = 2
+	params["category_filter"] = foods
+
+	return params
+
+
+def get_results(params):
+	consumer_key = "TwiZjmvAvrct4Xu6OxN49w" 
+	consumer_secret = "Ul7lj0H4wBdvPdY8Ci9eZkdI4tE"
+	token = "B93gZUtPLgD5KRc-IwBicN3qt30xUt2B"
+	token_secret = "p_gv7ofsb_LAfl-_u8hL30ezLrY"
+
+	session = rauth.OAuth1Session(
+		consumer_key = consumer_key
+		,consumer_secret = consumer_secret
+		,access_token = token
+		,access_token_secret = token_secret)
+
+	request = session.get("http://api.yelp.com/v2/search", params = params)
+
+	data = request.json()
+	session.close()
+
+	return data
+
+
 @welp.route('/', methods=['GET', 'POST'])
 def index():
 	foodForm = PreferencesForm(csrf_enabled=False)
@@ -58,6 +103,30 @@ def index():
 		if (foodForm.diners.data == "meh"):
 			lst += ["diners"]
 		cache.set('foodChoices', lst, timeout = 10 * 60)
+		locations = [(34.1100,-117.7197)] 
+		mehfoods = ['tradamerican', 'italian', 'chinese']
+		if len(mehfoods) = 0:
+			 mehfoods = ['tradamerican', 'italian', 'indpak', 'norwegian', 'greek','thai', 'mexican', 'chinese', 'japanese', 'pizza', 'diners']
+		api_calls = []
+		bizlist = []
+		nbizlist = []
+		n = len(mehfoods)
+		for x in range (0,n):
+			cat = mehfoods[x]
+			for lat, long in locations:
+					params = get_search_parameters(lat, long, cat)
+					api_calls.append(get_results(params))
+					eateries = api_calls[x][u'businesses']#.sort(key=operator.itemgetter('rating'))
+					api_calls[x][u'businesses'] = reducer(eateries)
+					time.sleep(1.0)
+			
+			l = len(api_calls[x][u'businesses'])
+			bizlist.append(api_calls[x][u'businesses'])
+		h = len(bizlist)
+		for z in range (0, h):
+			nbizlist += bizlist[z]
+
+		nbizlist.sort(key=operator.itemgetter('distance'))
 
 	return render_template('index.html', food_form = foodForm)
 
@@ -80,46 +149,3 @@ def results():
 
 
 
-
-def main():
-		locations = [(39.98,-82.98),(42.24,-83.61),(41.33,-89.13)]
-		api_calls = []
-		for lat, long in locations:
-				params = get_search_parameters(lat, long)
-				api_calls.append(get_results(params))
-				time.sleep(1.0)
-		print api_calls[0][u'region'][u'span'][u'latitude_delta']
-
-
-def get_search_parameters(lat, long):
-	params = {}
-	params["term"] = "restaurants " + mehFoods
-	params["ll"] = "{},{}".format(str(lat), str(long))
-	params["radius_filter"] = "2000"
-	params["limit"] = "10"
-
-	return params
-
-def get_results(params):
-	consumer_key = "TwiZjmvAvrct4Xu6OxN49w"
-	consumer_secret = "Ul7lj0H4wBdvPdY8Ci9eZkdI4tE"
-	token = "B93gZUtPLgD5KRc-IwBicN3qt30xUt2B"
-	token_secret = "p_gv7ofsb_LAfl-_u8hL30ezLrY"
-
-	session = rauth.OAuth1Session(
-		consumer_key = consumer_key
-		,consumer_secret = consumer_secret
-		,access_token = token
-		,access_token_secret = token_secret)
-
-	request = session.get("http://api.yelp.com/v2/search", params = params)
-
-	data = request.json()
-	session.close()
-
-	print data
-
-	return data
-
-# if __name__=="__main__":
-# 	main()
