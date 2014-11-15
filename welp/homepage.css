@@ -1,7 +1,12 @@
-.install-app-widget-link .install-app-body{min-height:127px;margin-left:-15px;padding-left:140px;background:url(//s3-media1.ak.yelpcdn.com/assets/2/www/img/731dcc3ca0bc/gfx/homepage/homepage_sprite.png) no-repeat 10px -290px}.install-app-widget-sms .install-app-body{min-height:130px;padding-left:112px;background:url(//s3-media3.ak.yelpcdn.com/assets/2/www/img/14d0a015ecd1/devices/phones_small.png) no-repeat}@media (-webkit-min-device-pixel-ratio: 2),
+.install-app-widget-link 
+.install-app-body
+{min-height:127px;
+margin-left:-15px;
+padding-left:140px;
+background:url(//s3-media1.ak.yelpcdn.com/assets/2/www/img/731dcc3ca0bc/gfx/homepage/homepage_sprite.png) no-repeat 10px -290px}.install-app-widget-sms .install-app-body{min-height:130px;padding-left:112px;background:url(//s3-media3.ak.yelpcdn.com/assets/2/www/img/14d0a015ecd1/devices/phones_small.png) no-repeat}@media (-webkit-min-device-pixel-ratio: 2),
+
+
 (min-resolution: 192dpi){.install-app-widget-sms .install-app-body{background-image:url(//s3-media4.ak.yelpcdn.com/assets/2/www/img/39938dda7d39/devices/phones_small_2x.png);background-size:100px 130px}}.ltie8 .install-app-sms{display:none}.sidebar .ysection,.sidebar .ywidget{margin-bottom:18px;border-bottom:1px solid #e5e5e1;padding-bottom:17px}.sidebar .ysection.user-scorecard,.sidebar .ywidget.user-scorecard{border-bottom:1px solid #e5e5e1;padding-bottom:8px}
-
-
 
 
 
