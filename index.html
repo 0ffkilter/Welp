@@ -6,7 +6,6 @@
 <script type="text/javascript">
             
             window.yPageStart = new Date().getTime();
-
 </script>
 
 
@@ -17,7 +16,7 @@
                 <meta name="description" content="Welp suggests food"/>
 
 
-                <meta name="keywords" content="Welp,recommendation,food,review,friend,restaurant,dentist,doctor,salon,spa,shopping,store,share,community,massage,sushi,pizza,nails,New York,Los Angeles">
+                <meta name="keywords" content="Welp,recommendation,food,review,friend,restaurant,search,meh,pointless">
 
 
                 <meta name="viewport" content="width=1020">
@@ -31,13 +30,15 @@
     <meta name="msapplication-starturl" content="http://www.welp.com/">
     <meta name="msapplication-navbutton-color" content="#bla169">
     <meta name="msapplication-window" content="width=1024;height=768">
-    <meta name="msapplication-tooltip" content="Go to Welp.com">
+    <meta name="msapplication-tooltip" content="Go to Welp">
 
 
 
                 <link rel="shortcut icon" href="http://s3-media2.fl.welpcdn.com/assets/2/www/img/118ff475a341/ico/favicon.ico">
 
                 <link rel="search" type="application/opensearchdescription+xml" href="/opensearch" title="Welp" />
+
+                <link rel="stylesheet" type="text/css" media="all" href="http://ke11i.webs.com/welp/welpmain.css">
 
 
   
@@ -46,20 +47,16 @@
 <script type="text/javascript">
                 
                     window.yPerfTimings.push(["head:css:start", (new Date()).getTime()]);
-
 </script>
 
 <script type="text/javascript">
                 
                     window.yPerfTimings.push(["head:css:end", (new Date()).getTime()]);
-
 </script>
 
 <script type="text/javascript">
                 
                         window.yPerfTimings.push(["head:end", (new Date()).getTime()]);
-
-
 </script>
     </head>
 
@@ -68,7 +65,6 @@
 <script type="text/javascript">
                 
                     window.yPerfTimings.push(["body:start", (new Date()).getTime()]);
-
 </script>
 
             <div id="fb-root"></div>
@@ -87,133 +83,17 @@
     </div>
 
 
-                        <form method="get" action="/search" id="header_find_form" class="header-search-form" role="search">
-            <div class="search-field-container with-suggestions-list flex-container-inline find-decorator">
-        <div class="search-field flex-container-inline">
-            <label for="find_desc" class="label">Find</label>
-            <div class="flex-box input-holder">
-                <input autocomplete="off" id="find_desc" maxlength="64" name="find_desc" placeholder="tacos, cheap dinner, Max’s" value="" aria-autocomplete="list" tabindex="1">
-            </div>
-        </div>
-    </div>
-
-            <div class="search-field-container with-suggestions-list flex-container-inline near-decorator">
-        <div class="search-field flex-container-inline">
-            <label for="dropperText_Mast" class="label">Near</label>
-            <div class="flex-box input-holder">
-                <input autocomplete="off" id="dropperText_Mast" maxlength="80" name="find_loc" placeholder="address, neighborhood, city, state or zip" value="chandler, az" aria-autocomplete="list" tabindex="2">
-                <input type="hidden" name="ns" value="1">
-            </div>
-
-        </div>
-    </div>
-
-        <div class="button-container">
-            <button id="header-search-submit" tabindex="3" title="Search" type="submit" value="submit" class="ybtn ybtn-primary header-button"><span>    <i  class="i ig-common i-search-common"></i>
-        <div class="spinner hidden">
-        <div class="spinner-container container1">
-            <div class="circle1"></div>
-            <div class="circle2"></div>
-            <div class="circle3"></div>
-            <div class="circle4"></div>
-        </div>
-        <div class="spinner-container container2">
-            <div class="circle1"></div>
-            <div class="circle2"></div>
-            <div class="circle3"></div>
-            <div class="circle4"></div>
-        </div>
-        <div class="spinner-container container3">
-            <div class="circle1"></div>
-            <div class="circle2"></div>
-            <div class="circle3"></div>
-            <div class="circle4"></div>
-        </div>
-    </div>
-
-</span></button>
-        </div>
-    </form>
-
     <script type="text/javascript">
             
                 window.yPerfTimings.push(["search_bar:rendered", (new Date()).getTime()]);
-
 </script>
 
 
-
-                        <div class="header-account webview-hidden">
-                <ul class="logged-out-nav">
-        <li>
-            <a href="https://www.welp.com/signup" id="header-sign-up" class="ybtn ybtn-primary header-button sign-up">Sign Up</a>
-        </li>
-        <li class="text-centered">
-            <a class="header-nav-link log-in" href="https://www.welp.com/login?return_url=%2Fchandler-az-us">
-                Log In
-            </a>
-        </li>
-    </ul>
-
-    </div>
-
-
-                            <ul class="header-nav pull-left" id="header-nav">
-                <li class="inline-block" id="home-link">
-                    <a class="header-nav-link" href="/">
-                        Home
-                    </a>
-                </li>
-                <li class="inline-block" id="about-me">
-                    <a class="header-nav-link" href="/user_details">
-                        About Me
-                    </a>
-                </li>
-                <li class="inline-block" id="write-review">
-                    <a class="header-nav-link" href="https://www.welp.com/writeareview">
-                        Write a Review
-                    </a>
-                </li>
-                <li class="inline-block" id="find-friends">
-                    <a class="header-nav-link" href="/signup?return_url=%2Ffind_friends%2F">
-                        Find Friends
-                    </a>
-                </li>
-                <li class="inline-block" id="messaging">
-                    <a class="header-nav-link" href="/signup?return_url=%2Fmail">
-                        Messages
-                    </a>
-                </li>
-                <li class="inline-block" id="talk">
-                    <a class="header-nav-link" href="/talk">
-                        Talk
-                    </a>
-                </li>
-                <li class="inline-block" id="events">
-                    <a class="header-nav-link" href="/events/chandler-az-us">
-                        Events
-                    </a>
-                </li>
-        </ul>
-
+                            
             </div>
         </div>
 
         </div>
-
-            
-
-
-                
-                
-
-
-                
-                    
-
-                <div id="print-masthead">
-        <img src="http://s3-media2.fl.welpcdn.com/assets/2/www/img/b7e9d647188d/gfx/header_print.gif" class="print-bkg-img" alt="Welp">
-    </div>
 
 
 
@@ -221,33 +101,6 @@
 
 
             <div id="super-container">
-                    
-        
-        <div class="googlead-sponsor-wrapper" id="welp_us_welcome_915x35-wrapper">
-            <div class="google-ads googlead-sponsor-container">
-                <div class="google-ads-block googlead-sponsor" data-slot-id="/1014943/welp_us/welcome/915x35" id="welp_us_welcome_915x35">
-                    <script>
-            (function() {
-                var main = null;
-
-                var main=function(e,c,d,b,a){if(e){document.getElementById(d+"-wrapper").style.display="none"}window.googletag.cmd.push(function(){var i=window.googletag.defineSlot(c,b,d);i.addService(window.googletag.pubads());if(e){var h=i.renderEnded;i.renderEnded=function(){if(document.getElementById(d).style.display!=="none"){document.getElementById(d+"-wrapper").style.display="block"}return h.apply(this,arguments)}}if(a){var g=i.fetchStarted;i.fetchStarted=function(){window.yDFP.adsCountSemaphore+=1;return g.apply(this,arguments)
-};var f=i.fetchEnded;i.fetchEnded=function(){window.yDFP.adsCountSemaphore-=1;return f.apply(this,arguments)}}window.googletag.display(d);window.yDFP.adSlots.push(i)})};
-
-                if (main === null) {
-                    throw 'invalid inline script, missing main declaration.';
-                }
-                main(true, "/1014943/welp_us/welcome/915x35", "welp_us_welcome_915x35", [[970, 66], [970, 90]], false);
-            })();
-    </script>
-                </div>
-            </div>
-        </div>
-    
-
-
-    <div id="alert-container">
-
-    </div>
 
 
 <div class="container homepage">
@@ -256,11 +109,10 @@
         
 
 
-        <h1 >Welp Chandler</h1>
+        <h1>welp CITYHERE</h1>
 
             <ul id="other-cities-list">
-                <li><a href="/la-crescenta-montrose-ca-us">La Crescenta-Montrose</a></li>                <li><a href="/claremont-ca-us">Claremont</a></li>                <li><a href="/sf">San Francisco</a></li>                <li><a href="/nyc">New York</a></li>                <li><a href="/san-jose">San Jose</a></li>                <li><a href="/la">Los Angeles</a></li>
-            <li><a href="/locations" class="main-box-toggle" id="loc-box-toggle">More Cities &raquo;</a></li>
+                <li><a href="">elsewhere</a></li>                <li><a href="">faraway</a></li>                <li><a href="">even farther away</a></li>                <li><a href="">you don't really travel</a></li>                <li><a href="">just stay in your room</a></li>
     </ul>
 
     </div>
@@ -273,43 +125,20 @@
 <div class="clearfix layout-block layout-a layout-border">
 <div class="column column-alpha main">
 
-                    <div class="ysection" id="signup-pitch">
+                    <div class="ysection" id="signup-pitch" style="border: none; background: none;">
         <div class="content">
-            <h2 class="embossed-text-white">Welp is the best way to find great local businesses</h2>
+            <h2 class="embossed-text-white">welp sometimes suggests places you might eat at.</h2>
             <p class="embossed-text-white">
-                People use Welp to search for everything from the city's tastiest burger to the most renowned cardiologist. What will you uncover in your neighborhood?
+                people could maybe use welp to search for restaurants that have things like cooked food or water and sometimes bread. try it if you want.
             </p>
-            <a href="/signup" class="ybtn ybtn-primary ytype">Create Your Free Account</a>
+            <a href="/signup" class="ybtn ybtn-primary ytype"><div style="position: relative; top: 85px; display: block; vertical-align: bottom; font-size: 80px;">food me</div></a>
         </div>
     </div>
 
 
-                    
-        <div class="googlead-box-wrapper" id="welp_us_welcome_625x100-wrapper">
-            <div class="google-ads googlead-box-container">
-                <div class="google-ads-block googlead-box" data-slot-id="/1014943/welp_us/welcome/625x100" id="welp_us_welcome_625x100">
-                    <script>
-            (function() {
-                var main = null;
-
-                var main=function(e,c,d,b,a){if(e){document.getElementById(d+"-wrapper").style.display="none"}window.googletag.cmd.push(function(){var i=window.googletag.defineSlot(c,b,d);i.addService(window.googletag.pubads());if(e){var h=i.renderEnded;i.renderEnded=function(){if(document.getElementById(d).style.display!=="none"){document.getElementById(d+"-wrapper").style.display="block"}return h.apply(this,arguments)}}if(a){var g=i.fetchStarted;i.fetchStarted=function(){window.yDFP.adsCountSemaphore+=1;return g.apply(this,arguments)
-};var f=i.fetchEnded;i.fetchEnded=function(){window.yDFP.adsCountSemaphore-=1;return f.apply(this,arguments)}}window.googletag.display(d);window.yDFP.adSlots.push(i)})};
-
-                if (main === null) {
-                    throw 'invalid inline script, missing main declaration.';
-                }
-                main(true, "/1014943/welp_us/welcome/625x100", "welp_us_welcome_625x100", [[625, 100]], false);
-            })();
-    </script>
-                </div>
-            </div>
-        </div>
-    
-
-
 
                         <div class="ysection clearfix" id="best-of-welp-module">
-            <h2>Best of Welp: Chandler</h2>
+            <h2>welp digest</h2>
             <div class="content">
                 <div class="ysection clearfix best-of-welp-main">
                     <div class="navigation">
@@ -318,7 +147,7 @@
             <li class="tab selected" data-tab-id="restaurants">
                 <a href="/c/chandler-az-us/restaurants">
                     <i  class="i ig-best_of_welp i-restaurants-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Restaurants</span>
+                    <span class="category-title">not food</span>
                         <small class="subtle-text">
                             3,536 reviewed
                         </small>
@@ -329,7 +158,7 @@
             <li class="tab" data-tab-id="nightlife">
                 <a href="/c/chandler-az-us/nightlife">
                     <i  class="i ig-best_of_welp i-nightlife-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Nightlife</span>
+                    <span class="category-title">not food</span>
                         <small class="subtle-text">
                             604 reviewed
                         </small>
@@ -340,7 +169,7 @@
             <li class="tab" data-tab-id="food">
                 <a href="/c/chandler-az-us/food">
                     <i  class="i ig-best_of_welp i-food-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Food</span>
+                    <span class="category-title">not food</span>
                         <small class="subtle-text">
                             1,496 reviewed
                         </small>
@@ -351,7 +180,7 @@
             <li class="tab" data-tab-id="shopping">
                 <a href="/c/chandler-az-us/shopping">
                     <i  class="i ig-best_of_welp i-shopping-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Shopping</span>
+                    <span class="category-title">kind of food?</span>
                         <small class="subtle-text">
                             2,752 reviewed
                         </small>
@@ -362,7 +191,7 @@
             <li class="tab" data-tab-id="bars">
                 <a href="/c/chandler-az-us/bars">
                     <i  class="i ig-best_of_welp i-nightlife-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Bars</span>
+                    <span class="category-title">not food</span>
                         <small class="subtle-text">
                             490 reviewed
                         </small>
@@ -373,7 +202,7 @@
             <li class="tab" data-tab-id="mexican">
                 <a href="/c/chandler-az-us/mexican">
                     <i  class="i ig-best_of_welp i-restaurants-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Mexican</span>
+                    <span class="category-title">vaguely resembles food</span>
                         <small class="subtle-text">
                             472 reviewed
                         </small>
@@ -384,7 +213,7 @@
             <li class="tab" data-tab-id="newamerican">
                 <a href="/c/chandler-az-us/newamerican">
                     <i  class="i ig-best_of_welp i-restaurants-best_of_welp BOY-icon"></i>
-                    <span class="category-title">American (New)</span>
+                    <span class="category-title">not really food</span>
                         <small class="subtle-text">
                             247 reviewed
                         </small>
@@ -395,7 +224,7 @@
             <li class="tab" data-tab-id="tradamerican">
                 <a href="/c/chandler-az-us/tradamerican">
                     <i  class="i ig-best_of_welp i-restaurants-best_of_welp BOY-icon"></i>
-                    <span class="category-title">American (Traditional)</span>
+                    <span class="category-title">maybe food</span>
                         <small class="subtle-text">
                             385 reviewed
                         </small>
@@ -406,7 +235,7 @@
             <li class="tab" data-tab-id="beautysvc">
                 <a href="/c/chandler-az-us/beautysvc">
                     <i  class="i ig-best_of_welp i-beautysvc-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Beauty & Spas</span>
+                    <span class="category-title">not food</span>
                         <small class="subtle-text">
                             1,834 reviewed
                         </small>
@@ -417,7 +246,7 @@
             <li class="tab" data-tab-id="auto">
                 <a href="/c/chandler-az-us/auto">
                     <i  class="i ig-best_of_welp i-auto-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Automotive</span>
+                    <span class="category-title">not food</span>
                         <small class="subtle-text">
                             1,487 reviewed
                         </small>
@@ -428,7 +257,7 @@
             <li class="tab" data-tab-id="homeservices">
                 <a href="/c/chandler-az-us/homeservices">
                     <i  class="i ig-best_of_welp i-homeservices-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Home Services</span>
+                    <span class="category-title">antifood</span>
                         <small class="subtle-text">
                             2,357 reviewed
                         </small>
@@ -439,7 +268,7 @@
             <li class="tab" data-tab-id="health">
                 <a href="/c/chandler-az-us/health">
                     <i  class="i ig-best_of_welp i-health-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Health & Medical</span>
+                    <span class="category-title">dogs shaped like food</span>
                         <small class="subtle-text">
                             2,031 reviewed
                         </small>
@@ -450,158 +279,9 @@
             <li class="tab" data-tab-id="localservices">
                 <a href="/c/chandler-az-us/localservices">
                     <i  class="i ig-best_of_welp i-localservices-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Local Services</span>
+                    <span class="category-title">not food</span>
                         <small class="subtle-text">
                             1,118 reviewed
-                        </small>
-                </a>
-            </li>
-
-                <li class="more no-count">
-                    <a href="javascript:;">
-                        <i  class="i ig-best_of_welp i-down_arrow-best_of_welp BOY-icon"></i>
-                        <span class="category-title">More Categories</span>
-                    </a>
-                </li>
-
-            <li class="tab" data-tab-id="active">
-                <a href="/c/chandler-az-us/active">
-                    <i  class="i ig-best_of_welp i-active-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Active Life</span>
-                        <small class="subtle-text">
-                            849 reviewed
-                        </small>
-                </a>
-            </li>
-
-
-            <li class="tab" data-tab-id="arts">
-                <a href="/c/chandler-az-us/arts">
-                    <i  class="i ig-best_of_welp i-arts-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Arts & Entertainment</span>
-                        <small class="subtle-text">
-                            394 reviewed
-                        </small>
-                </a>
-            </li>
-
-
-            <li class="tab" data-tab-id="eventservices">
-                <a href="/c/chandler-az-us/eventservices">
-                    <i  class="i ig-best_of_welp i-eventservices-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Event Planning & Services</span>
-                        <small class="subtle-text">
-                            599 reviewed
-                        </small>
-                </a>
-            </li>
-
-
-            <li class="tab" data-tab-id="hotelstravel">
-                <a href="/c/chandler-az-us/hotelstravel">
-                    <i  class="i ig-best_of_welp i-hotelstravel-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Hotels & Travel</span>
-                        <small class="subtle-text">
-                            402 reviewed
-                        </small>
-                </a>
-            </li>
-
-
-            <li class="tab" data-tab-id="pets">
-                <a href="/c/chandler-az-us/pets">
-                    <i  class="i ig-best_of_welp i-pets-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Pets</span>
-                        <small class="subtle-text">
-                            378 reviewed
-                        </small>
-                </a>
-            </li>
-
-
-            <li class="tab" data-tab-id="realestate">
-                <a href="/c/chandler-az-us/realestate">
-                    <i  class="i ig-best_of_welp i-realestate-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Real Estate</span>
-                        <small class="subtle-text">
-                            711 reviewed
-                        </small>
-                </a>
-            </li>
-
-
-            <li class="tab" data-tab-id="professional">
-                <a href="/c/chandler-az-us/professional">
-                    <i  class="i ig-best_of_welp i-professional-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Professional Services</span>
-                        <small class="subtle-text">
-                            592 reviewed
-                        </small>
-                </a>
-            </li>
-
-
-            <li class="tab" data-tab-id="education">
-                <a href="/c/chandler-az-us/education">
-                    <i  class="i ig-best_of_welp i-education-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Education</span>
-                        <small class="subtle-text">
-                            364 reviewed
-                        </small>
-                </a>
-            </li>
-
-
-            <li class="tab" data-tab-id="localflavor">
-                <a href="/c/chandler-az-us/localflavor">
-                    <i  class="i ig-best_of_welp i-localflavor-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Local Flavor</span>
-                        <small class="subtle-text">
-                            92 reviewed
-                        </small>
-                </a>
-            </li>
-
-
-            <li class="tab" data-tab-id="financialservices">
-                <a href="/c/chandler-az-us/financialservices">
-                    <i  class="i ig-best_of_welp i-financialservices-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Financial Services</span>
-                        <small class="subtle-text">
-                            411 reviewed
-                        </small>
-                </a>
-            </li>
-
-
-            <li class="tab" data-tab-id="publicservicesgovt">
-                <a href="/c/chandler-az-us/publicservicesgovt">
-                    <i  class="i ig-best_of_welp i-publicservicesgovt-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Public Services & Government</span>
-                        <small class="subtle-text">
-                            86 reviewed
-                        </small>
-                </a>
-            </li>
-
-
-            <li class="tab" data-tab-id="religiousorgs">
-                <a href="/c/chandler-az-us/religiousorgs">
-                    <i  class="i ig-best_of_welp i-religiousorgs-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Religious Organizations</span>
-                        <small class="subtle-text">
-                            98 reviewed
-                        </small>
-                </a>
-            </li>
-
-
-            <li class="tab" data-tab-id="massmedia">
-                <a href="/c/chandler-az-us/massmedia">
-                    <i  class="i ig-best_of_welp i-massmedia-best_of_welp BOY-icon"></i>
-                    <span class="category-title">Mass Media</span>
-                        <small class="subtle-text">
-                            37 reviewed
                         </small>
                 </a>
             </li>
@@ -971,7 +651,6 @@
                 <script type="text/javascript">
             
                 window.yPerfTimings.push(["best_of_welp:rendered", (new Date()).getTime()]);
-
 </script>
 
                 
@@ -979,514 +658,9 @@
                         <script type="text/javascript">
             
                 window.yPerfTimings.push(["activity_feed_first_item:rendered", (new Date()).getTime()]);
-
 </script>
 
 
-    <div class="ysection clearfix" id="activity-feed">
-                <div class="header-with-ui">
-            <h2>Recent Activity</h2>
-            <div class="hd-ui">
-                
-    <ul class="tabs-pill js-tabs hidden">
-
-
-
-
-
-            <li data-tab-id="near_you" class="tab inline-block selected"><a href="#">Near You</a> <span class="ybadge ybadge-notification hidden"></span></li>
-    </ul>
-
-            </div>
-        </div>
-        <div class="content">
-                <div class="feeds feed-module">
-        <ul class="content-list">
-                
-
-
-    <li data-section-id="near_you">
-    <ul class="ylist ylist-bordered">
-                                            <li class="media-block clearfix review-block media-block-large">
-        <div class="media-avatar">
-                    
-
-
-
-    <div class="photo-box pb-60s">
-            <a href="/user_details?userid=_zlg9M-scbRc5FxBPBbxlA">
-                <img alt="" class="photo-box-img" height="60" src="http://s3-media1.fl.welpcdn.com/assets/2/www/img/20983a63ea50/default_avatars/user_60_square.png" width="60">
-            </a>
-    </div>
-
-
-        </div>
-        <div class="media-story">
-            
-
-    <div class="feed-content">
-        <div class="media-title item-title clearfix">
-            <div class="title-text">
-                                    <a class="user-name" href="/user_details?userid=_zlg9M-scbRc5FxBPBbxlA" data-hovercard-id="DX9tjjXfrt7HdUYvD6CHbg">C N.</a>
- wrote a <b>review</b> for     <a class="biz-name" href="/biz/caf%C3%A9-monarch-scottsdale-5?hrid=9mJ4IZXb1CbVoR_hpuUJXA" data-hovercard-id="wIAjIrcCTa9gbq4hNZ7a1g">Café Monarch</a>
-
-
-            </div>
-            <div class="time-stamp">
-                A moment ago
-            </div>
-        </div>
-        <div class="item-description">
-            
-
-        <div class="biz-rating biz-rating-very-large clearfix">
-        <div >
-                
-    <div class="rating-very-large">
-        <i class="star-img stars_5" title="5.0 star rating">
-            <img alt="5.0 star rating" class="offscreen" height="303" src="http://s3-media3.fl.welpcdn.com/assets/2/www/img/c2252a4cd43e/ico/stars/v2/stars_map.png" width="84">
-        </i>
-    </div>
-
-
-        </div>
-            <span class="rating-qualifier">
-        11/14/2014
-    </span>
-
-    </div>
-
-        <p class="js-content-expandable">
-                <span class="js-content-toggleable">
-                    We had dinner here tonight for our Anniversary and I think it&#39;s my new favorite restaurant.  The atmosphere is one of the nicest we&#39;ve seen in Phoenix - not the typical Scottsdale restaurant. We had a table in the courtyard and it was beautiful and intimate. The place is upscale but not pretentious.  Loved the food!  They have a 4 course meal and you have the option of a wine pairing, which we did.    This restaurant is a must try!
-                </span>
-        </p>
-
-                <div class="rateReview voting-feedback voting-feedback--has-buttons" data-review-id="9mJ4IZXb1CbVoR_hpuUJXA">
-                    <p class="voting-intro voting-prompt">
-        Was this review &hellip;?
-    </p>
-
-                <ul class="voting-buttons" data-csrf-token="ec9afa5b2956bcf5d4764bc7200e870a9887306022ba7cb6ec094ad5be9f1391">
-                        
-
-    <li class="voting-stat inline-block">
-        <a href="javascript:;" rel="useful" class="ybtn ybtn-small useful"><span  class="i-wrap ig-wrap-common i-big-ufc-useful-common-wrap button-content"><i  class="i ig-common i-big-ufc-useful-common"></i>     <span class="vote-type">Useful</span>
-    <span class="count"></span></span></a>
-    </li>
-
-                        
-
-    <li class="voting-stat inline-block">
-        <a href="javascript:;" rel="funny" class="ybtn ybtn-small funny"><span  class="i-wrap ig-wrap-common i-big-ufc-funny-common-wrap button-content"><i  class="i ig-common i-big-ufc-funny-common"></i>     <span class="vote-type">Funny</span>
-    <span class="count"></span></span></a>
-    </li>
-
-                        
-
-    <li class="voting-stat inline-block">
-        <a href="javascript:;" rel="cool" class="ybtn ybtn-small cool"><span  class="i-wrap ig-wrap-common i-big-ufc-cool-common-wrap button-content"><i  class="i ig-common i-big-ufc-cool-common"></i>     <span class="vote-type">Cool</span>
-    <span class="count"></span></span></a>
-    </li>
-
-                </ul>
-        </div>
-
-
-
-        </div>
-    </div>
-
-        </div>
-    </li>
-
-                <li class="media-block clearfix review-block media-block-large">
-        <div class="media-avatar">
-                    
-
-
-
-    <div class="photo-box pb-60s">
-            <a href="/user_details?userid=je5k8a3qIOM0VJE5MaxsfQ">
-                <img alt="" class="photo-box-img" height="60" src="http://s3-media1.fl.welpcdn.com/photo/iioXJxhLObrvq1pQ_RZJpg/60s.jpg" width="60">
-            </a>
-    </div>
-
-
-        </div>
-        <div class="media-story">
-            
-
-    <div class="feed-content">
-        <div class="media-title item-title clearfix">
-            <div class="title-text">
-                                    <a class="user-name" href="/user_details?userid=je5k8a3qIOM0VJE5MaxsfQ" data-hovercard-id="GVdmWqqNqtq_K1VnTx0V3A">Bonnie G.</a>
- wrote a <b>review</b> for     <a class="biz-name" href="/biz/blasted-barley-beer-company-tempe?hrid=YUyRslXKfIY6FCOyQCnJhg" data-hovercard-id="SwfP6pVOdWrAVpIE9HOjmQ">Blasted Barley Beer Company</a>
-
-
-            </div>
-            <div class="time-stamp">
-                13 minutes ago
-            </div>
-        </div>
-        <div class="item-description">
-            
-
-        <div class="biz-rating biz-rating-very-large clearfix">
-        <div >
-                
-    <div class="rating-very-large">
-        <i class="star-img stars_4" title="4.0 star rating">
-            <img alt="4.0 star rating" class="offscreen" height="303" src="http://s3-media3.fl.welpcdn.com/assets/2/www/img/c2252a4cd43e/ico/stars/v2/stars_map.png" width="84">
-        </i>
-    </div>
-
-
-        </div>
-            <span class="rating-qualifier">
-        11/14/2014
-    </span>
-
-    </div>
-
-        <p class="js-content-expandable">
-                <span class="js-content-toggleable">
-                    Cool atmosphere!<br><br>Nice lay out, all service was super nice and nice to be outside near Milll.<br><br>Also, Cake is playing.
-                </span>
-        </p>
-
-                <div class="rateReview voting-feedback voting-feedback--has-buttons" data-review-id="YUyRslXKfIY6FCOyQCnJhg">
-                    <p class="voting-intro voting-prompt">
-        Was this review &hellip;?
-    </p>
-
-                <ul class="voting-buttons" data-csrf-token="ec9afa5b2956bcf5d4764bc7200e870a9887306022ba7cb6ec094ad5be9f1391">
-                        
-
-    <li class="voting-stat inline-block">
-        <a href="javascript:;" rel="useful" class="ybtn ybtn-small useful"><span  class="i-wrap ig-wrap-common i-big-ufc-useful-common-wrap button-content"><i  class="i ig-common i-big-ufc-useful-common"></i>     <span class="vote-type">Useful</span>
-    <span class="count"></span></span></a>
-    </li>
-
-                        
-
-    <li class="voting-stat inline-block">
-        <a href="javascript:;" rel="funny" class="ybtn ybtn-small funny"><span  class="i-wrap ig-wrap-common i-big-ufc-funny-common-wrap button-content"><i  class="i ig-common i-big-ufc-funny-common"></i>     <span class="vote-type">Funny</span>
-    <span class="count"></span></span></a>
-    </li>
-
-                        
-
-    <li class="voting-stat inline-block">
-        <a href="javascript:;" rel="cool" class="ybtn ybtn-small cool"><span  class="i-wrap ig-wrap-common i-big-ufc-cool-common-wrap button-content"><i  class="i ig-common i-big-ufc-cool-common"></i>     <span class="vote-type">Cool</span>
-    <span class="count"></span></span></a>
-    </li>
-
-                </ul>
-        </div>
-
-
-
-        </div>
-    </div>
-
-        </div>
-    </li>
-
-                <li class="media-block clearfix review-block media-block-large">
-        <div class="media-avatar">
-                    
-
-
-
-    <div class="photo-box pb-60s">
-            <a href="/user_details?userid=N6ZTMIue-2b30CJv2tyPGg">
-                <img alt="" class="photo-box-img" height="60" src="http://s3-media2.fl.welpcdn.com/photo/uy1X8wfqTltv8sg5lnNmdA/60s.jpg" width="60">
-            </a>
-    </div>
-
-
-        </div>
-        <div class="media-story">
-            
-
-    <div class="feed-content">
-        <div class="media-title item-title clearfix">
-            <div class="title-text">
-                                    <a class="user-name" href="/user_details?userid=N6ZTMIue-2b30CJv2tyPGg" data-hovercard-id="pdi_mCabzdAEld75d15eYA">Matthew G.</a>
- wrote a <b>review</b> for     <a class="biz-name" href="/biz/ikes-love-and-sandwiches-tempe-3?hrid=gKltIHdLaW8EHbWanYEEVA" data-hovercard-id="DVLbD31KFxqYqwh28wIwgA">Ike’s Love &amp; Sandwiches</a>
-
-
-            </div>
-            <div class="time-stamp">
-                20 minutes ago
-            </div>
-        </div>
-        <div class="item-description">
-            
-
-        <div class="biz-rating biz-rating-very-large clearfix">
-        <div >
-                
-    <div class="rating-very-large">
-        <i class="star-img stars_4" title="4.0 star rating">
-            <img alt="4.0 star rating" class="offscreen" height="303" src="http://s3-media3.fl.welpcdn.com/assets/2/www/img/c2252a4cd43e/ico/stars/v2/stars_map.png" width="84">
-        </i>
-    </div>
-
-
-        </div>
-            <span class="rating-qualifier">
-        11/14/2014
-    </span>
-
-    </div>
-
-        <p class="js-content-expandable">
-                <span class="js-content-toggleable">
-                    Great place...HUGE menu....maybe read it online before you stroll in...or you will stand there like it&#39;s 1995 and you are trying to figure out what movie to rent from Blockbuster. <br><br>All our sandwiches were great. Fries were good, nothing special to me. <br><br>Got really busy towards lunch time, very limited seating. Not a bad thing though! Place is booming.
-                </span>
-        </p>
-
-                <div class="rateReview voting-feedback voting-feedback--has-buttons" data-review-id="gKltIHdLaW8EHbWanYEEVA">
-                    <p class="voting-intro voting-prompt">
-        Was this review &hellip;?
-    </p>
-
-                <ul class="voting-buttons" data-csrf-token="ec9afa5b2956bcf5d4764bc7200e870a9887306022ba7cb6ec094ad5be9f1391">
-                        
-
-    <li class="voting-stat inline-block">
-        <a href="javascript:;" rel="useful" class="ybtn ybtn-small useful"><span  class="i-wrap ig-wrap-common i-big-ufc-useful-common-wrap button-content"><i  class="i ig-common i-big-ufc-useful-common"></i>     <span class="vote-type">Useful</span>
-    <span class="count"></span></span></a>
-    </li>
-
-                        
-
-    <li class="voting-stat inline-block">
-        <a href="javascript:;" rel="funny" class="ybtn ybtn-small funny"><span  class="i-wrap ig-wrap-common i-big-ufc-funny-common-wrap button-content"><i  class="i ig-common i-big-ufc-funny-common"></i>     <span class="vote-type">Funny</span>
-    <span class="count"></span></span></a>
-    </li>
-
-                        
-
-    <li class="voting-stat inline-block">
-        <a href="javascript:;" rel="cool" class="ybtn ybtn-small cool"><span  class="i-wrap ig-wrap-common i-big-ufc-cool-common-wrap button-content"><i  class="i ig-common i-big-ufc-cool-common"></i>     <span class="vote-type">Cool</span>
-    <span class="count"></span></span></a>
-    </li>
-
-                </ul>
-        </div>
-
-
-
-        </div>
-    </div>
-
-        </div>
-    </li>
-
-                <li class="media-block clearfix review-block media-block-large">
-        <div class="media-avatar">
-                    
-
-
-
-    <div class="photo-box pb-60s">
-            <a href="/user_details?userid=OjjzrIvqDhhUxbd4pRYqEw">
-                <img alt="" class="photo-box-img" height="60" src="http://s3-media2.fl.welpcdn.com/photo/zjnnRPqOHpgiY9pIO14oCQ/60s.jpg" width="60">
-            </a>
-    </div>
-
-
-        </div>
-        <div class="media-story">
-            
-
-    <div class="feed-content">
-        <div class="media-title item-title clearfix">
-            <div class="title-text">
-                                    <a class="user-name" href="/user_details?userid=OjjzrIvqDhhUxbd4pRYqEw" data-hovercard-id="tx_28D1neJJtygEpWWGNYg">Canofworms S.</a>
- wrote a <b>review</b> for     <a class="biz-name" href="/biz/the-revival-tempe?hrid=a699Op4BDL8g5AA1zl0DdQ" data-hovercard-id="7EgdtyM4oh_NGuLb4c-EKQ">The Revival</a>
-
-
-            </div>
-            <div class="time-stamp">
-                21 minutes ago
-            </div>
-        </div>
-        <div class="item-description">
-            
-
-        <div class="biz-rating biz-rating-very-large clearfix">
-        <div >
-                
-    <div class="rating-very-large">
-        <i class="star-img stars_5" title="5.0 star rating">
-            <img alt="5.0 star rating" class="offscreen" height="303" src="http://s3-media3.fl.welpcdn.com/assets/2/www/img/c2252a4cd43e/ico/stars/v2/stars_map.png" width="84">
-        </i>
-    </div>
-
-
-        </div>
-            <span class="rating-qualifier">
-        11/14/2014
-    </span>
-
-    </div>
-
-        <p class="js-content-expandable">
-                <span class="js-content-toggleable">
-                    New fave in town. Food is amazing and is a treat to the taste buds. Green chili pork stew. Holy mutha...speechless.
-                </span>
-        </p>
-
-                <div class="rateReview voting-feedback voting-feedback--has-buttons" data-review-id="a699Op4BDL8g5AA1zl0DdQ">
-                    <p class="voting-intro voting-prompt">
-        Was this review &hellip;?
-    </p>
-
-                <ul class="voting-buttons" data-csrf-token="ec9afa5b2956bcf5d4764bc7200e870a9887306022ba7cb6ec094ad5be9f1391">
-                        
-
-    <li class="voting-stat inline-block">
-        <a href="javascript:;" rel="useful" class="ybtn ybtn-small useful"><span  class="i-wrap ig-wrap-common i-big-ufc-useful-common-wrap button-content"><i  class="i ig-common i-big-ufc-useful-common"></i>     <span class="vote-type">Useful</span>
-    <span class="count"></span></span></a>
-    </li>
-
-                        
-
-    <li class="voting-stat inline-block">
-        <a href="javascript:;" rel="funny" class="ybtn ybtn-small funny"><span  class="i-wrap ig-wrap-common i-big-ufc-funny-common-wrap button-content"><i  class="i ig-common i-big-ufc-funny-common"></i>     <span class="vote-type">Funny</span>
-    <span class="count"></span></span></a>
-    </li>
-
-                        
-
-    <li class="voting-stat inline-block">
-        <a href="javascript:;" rel="cool" class="ybtn ybtn-small cool"><span  class="i-wrap ig-wrap-common i-big-ufc-cool-common-wrap button-content"><i  class="i ig-common i-big-ufc-cool-common"></i>     <span class="vote-type">Cool</span>
-    <span class="count"></span></span></a>
-    </li>
-
-                </ul>
-        </div>
-
-
-
-        </div>
-    </div>
-
-        </div>
-    </li>
-
-                <li class="media-block clearfix review-block media-block-large">
-        <div class="media-avatar">
-                    
-
-
-
-    <div class="photo-box pb-60s">
-            <a href="/user_details?userid=7wbFKzrYFhl-dt_i6fC66Q">
-                <img alt="" class="photo-box-img" height="60" src="http://s3-media2.fl.welpcdn.com/photo/4Pxrm5HBy9OafArYm_77iw/60s.jpg" width="60">
-            </a>
-    </div>
-
-
-        </div>
-        <div class="media-story">
-            
-
-    <div class="feed-content">
-        <div class="media-title item-title clearfix">
-            <div class="title-text">
-                                    <a class="user-name" href="/user_details?userid=7wbFKzrYFhl-dt_i6fC66Q" data-hovercard-id="R7GgA0qiG42-zwS2PLAb9A">Stephen N.</a>
- wrote a <b>review</b> for     <a class="biz-name" href="/biz/hillside-spot-phoenix?hrid=E-onLOwlCuKwi2yL7_1n5w" data-hovercard-id="aTE_fh-AopH9ZrYs9ysBMg">Hillside Spot</a>
-
-
-            </div>
-            <div class="time-stamp">
-                29 minutes ago
-            </div>
-        </div>
-        <div class="item-description">
-            
-
-        <div class="biz-rating biz-rating-very-large clearfix">
-        <div >
-                
-    <div class="rating-very-large">
-        <i class="star-img stars_2" title="2.0 star rating">
-            <img alt="2.0 star rating" class="offscreen" height="303" src="http://s3-media3.fl.welpcdn.com/assets/2/www/img/c2252a4cd43e/ico/stars/v2/stars_map.png" width="84">
-        </i>
-    </div>
-
-
-        </div>
-            <span class="rating-qualifier">
-        11/14/2014
-    </span>
-
-    </div>
-
-        <p class="js-content-expandable">
-                <span class="js-content-toggleable">
-                    I wanted to like it..... The food is ok. Service was lacking. From the first moment the waiter only bothered to take drink orders from 3 of the 4 of us. Then the food order came; one of the orders was wrong and the response was <br>&#34;You don&#39;t want it?!&#34; <br>You don&#39;t want this meal you did not order? No we wanted what we ordered. <br><br>Disappointed is really where I am on this one. Oh and the chop sticks my wife got with her meal was actually just a chop stick, yep just one stick. <br><br>Maybe they will upgrade the staff or teach some manners. Either one would be better than where they are now.
-                </span>
-        </p>
-
-                <div class="rateReview voting-feedback voting-feedback--has-buttons" data-review-id="E-onLOwlCuKwi2yL7_1n5w">
-                    <p class="voting-intro voting-prompt">
-        Was this review &hellip;?
-    </p>
-
-                <ul class="voting-buttons" data-csrf-token="ec9afa5b2956bcf5d4764bc7200e870a9887306022ba7cb6ec094ad5be9f1391">
-                        
-
-    <li class="voting-stat inline-block">
-        <a href="javascript:;" rel="useful" class="ybtn ybtn-small useful"><span  class="i-wrap ig-wrap-common i-big-ufc-useful-common-wrap button-content"><i  class="i ig-common i-big-ufc-useful-common"></i>     <span class="vote-type">Useful</span>
-    <span class="count"></span></span></a>
-    </li>
-
-                        
-
-    <li class="voting-stat inline-block">
-        <a href="javascript:;" rel="funny" class="ybtn ybtn-small funny"><span  class="i-wrap ig-wrap-common i-big-ufc-funny-common-wrap button-content"><i  class="i ig-common i-big-ufc-funny-common"></i>     <span class="vote-type">Funny</span>
-    <span class="count"></span></span></a>
-    </li>
-
-                        
-
-    <li class="voting-stat inline-block">
-        <a href="javascript:;" rel="cool" class="ybtn ybtn-small cool"><span  class="i-wrap ig-wrap-common i-big-ufc-cool-common-wrap button-content"><i  class="i ig-common i-big-ufc-cool-common"></i>     <span class="vote-type">Cool</span>
-    <span class="count"></span></span></a>
-    </li>
-
-                </ul>
-        </div>
-
-
-
-        </div>
-    </div>
-
-        </div>
-    </li>
-
-
-
-
-    </ul>
-        
-    <a class="link-bar" href="javascript:;"><span>See more recent activity</span></a>
-
-    </li>
-
-        </ul>
-    </div>
-
-        </div>
-
-    </div>
 
         <div id="compliment-input-boxes" style="display: none;">
             <fieldset>
@@ -1736,111 +910,42 @@
 </div><div class="column column-beta sidebar">
 
                         <div class="ysection clearfix rotd">
-            <h3>Review of the Day</h3>
+            <h3>review not about food</h3>
                 <div class="media-block media-block-large clearfix">
         <div class="media-avatar">
                     
 
 
     <div class="photo-box pb-60s" data-hovercard-id="JJRfoHvm_IgS7GtOXP-f4w">
-                <a href="/user_details?userid=T8LqkYbwMPZmvXSsUfN8sQ">
-            
 
-    <img alt="Morgan D." class="photo-box-img" height="60" src="//s3-media2.fl.welpcdn.com/photo/LbmkoAXzHP8J61uFLgpxtA/60s.jpg" width="60">
-
-        </a>
-
-    </div>
-
-
+ <div class="gray" width="60" height="60" style="float:left;"><div class="photo-box-img"></div></div>
 
         </div>
         <div class="media-story">
             <div class="media-title clearfix">
-                        <a class="user-display-name" href="/user_details?userid=T8LqkYbwMPZmvXSsUfN8sQ" data-hovercard-id="JJRfoHvm_IgS7GtOXP-f4w">Morgan D.</a> reviewed     <a class="biz-name" href="/biz/spoke-and-wheel-phoenix?hrid=i4TzrMXyil76wxaplCdDMg" data-hovercard-id="qChKOYFLiXtBJbTsJ5SYGQ">Spoke &amp; Wheel</a>
+            
+                        <a>morgan or something</a> reviewed     <a>a pottery place</a>
 
             </div>
                 
     <div class="rating-large">
         <i class="star-img stars_5" title="5.0 star rating">
-            <img alt="5.0 star rating" class="offscreen" height="303" src="http://s3-media3.fl.welpcdn.com/assets/2/www/img/c2252a4cd43e/ico/stars/v2/stars_map.png" width="84">
+            <img alt="5.0 star rating" class="offscreen" height="303" src="http://s3-media3.fl.yelpcdn.com/assets/2/www/img/c2252a4cd43e/ico/stars/v2/stars_map.png" width="84">
         </i>
     </div>
 
 
             <p>
-                Came here with four friends, sat at the bar, and pigged out. We ordered deviled eggs, tacos, and mac &amp; cheese. Quite possibly the best combo known to man. A food trifecta. <br><br>The food was so delicious we…
-                <a href="/biz/spoke-and-wheel-phoenix?hrid=i4TzrMXyil76wxaplCdDMg" class="read-more">Read more</a>
+                "i mean they had cool pots and stuff."
             </p>
         </div>
     </div>
-
-            <a class="link-more" href="/browse/reviews/picks?edition_id=iiruNMRBWMdxqRtaVIMPkA">Archive</a>
         </div>
 
-                
-
-                <div class="ysection">
-                                <div class="install-app-widget install-app-widget-sms">
-        <h3>Welp is totally portable</h3>
-        <div class="install-app-body">
-            <p>It’s like carrying around 1,000 phonebooks in the palm of your hand. No biceps required. Download the app now.</p>
-            
-    
-
-    <div class="js-install-app-sms install-app-sms">
-        <noscript>
-            <p class="yform-help-block yform-help-invalid">
-            Please enable Javascript and reload page to use this feature.
-            </p>
-        </noscript>
-
-        <form action="/sms_app_link" autocomplete="off" class="yform yform-inline" method="POST">
-              <input     type="hidden"    name="csrftok"    class="csrftok"    value="02459a40d3cb87c3afb767cee23848b7fbe6c077fc09d8c6891dd27622c20637">
-                          <span class="yform-input-field-wrap">
-                <label for="install-app-recipient" class="offscreen">Phone number</label>
-                <input class="yform-field-small" id="install-app-recipient" name="phone_number" placeholder="+1 (123) 456-7890" type="text">
-                <i style="display: none;" class="i ig-common i-form-error-common"></i>
-                <i style="display: none;" class="i ig-common i-form-success-common"></i>
-            </span>
-            <button disabled="disabled" type="submit" value="submit" class="ybtn ybtn-primary ybtn-small ybtn-disabled yform-field-small"><span>Go</span></button>
-
-        </form>
-            <p class="yform-help-block">Once you receive the link, we’ll delete your info from our system.</p>
-    </div>
-
-        </div>
-        <a class="link-more" href="/welpmobile">Learn more</a>
-    </div>
-
-
-                </div>
-
-                    
-        <div class="googlead-bigbox-wrapper" id="welp_us_welcome_300x250-wrapper">
-            <div class="google-ads googlead-bigbox-container">
-                <div class="google-ads-block googlead-bigbox" data-slot-id="/1014943/welp_us/welcome/300x250" id="welp_us_welcome_300x250">
-                    <script>
-            (function() {
-                var main = null;
-
-                var main=function(e,c,d,b,a){if(e){document.getElementById(d+"-wrapper").style.display="none"}window.googletag.cmd.push(function(){var i=window.googletag.defineSlot(c,b,d);i.addService(window.googletag.pubads());if(e){var h=i.renderEnded;i.renderEnded=function(){if(document.getElementById(d).style.display!=="none"){document.getElementById(d+"-wrapper").style.display="block"}return h.apply(this,arguments)}}if(a){var g=i.fetchStarted;i.fetchStarted=function(){window.yDFP.adsCountSemaphore+=1;return g.apply(this,arguments)
-};var f=i.fetchEnded;i.fetchEnded=function(){window.yDFP.adsCountSemaphore-=1;return f.apply(this,arguments)}}window.googletag.display(d);window.yDFP.adSlots.push(i)})};
-
-                if (main === null) {
-                    throw 'invalid inline script, missing main declaration.';
-                }
-                main(true, "/1014943/welp_us/welcome/300x250", "welp_us_welcome_300x250", [[300, 250]], false);
-            })();
-    </script>
-                </div>
-            </div>
-        </div>
-    
 
 
                         <div class="ysection clearfix">
-        <h3>Popular Events</h3>
+        <h3>food events</h3>
         <ul class="ylist">
                 <li>
                         <div class="media-block media-block-large clearfix event-listing-medium">
@@ -1864,17 +969,17 @@
         </div>
         <div class="media-story">
             <div class="media-title">
-                        <a href="/events/phoenix-international-supper-club-uye-9">International Supper Club UYE</a>
+                        <a href="/events/phoenix-international-supper-club-uye-9">thing at a place</a>
 
             </div>
             <small>
-                    Sunday, Nov 16, 12:00 pm
+                    yesterday at 12:00pm
 
             </small>
             <div>
                 
         <small class="subtle-text">
-            19 are interested
+            19-32 ppl are interested
         </small>
 
             </div>
@@ -1904,17 +1009,17 @@
         </div>
         <div class="media-story">
             <div class="media-title">
-                        <a href="/events/phoenix-6th-annual-festival-at-the-farm">6th Annual Festival at the Farm</a>
+                        <a href="/events/phoenix-6th-annual-festival-at-the-farm">don't go to events</a>
 
             </div>
             <small>
-                    Tomorrow, Nov 15, 1:00 pm – 5:00 pm
+                    never at 4:00pm
 
             </small>
             <div>
                 
         <small class="subtle-text">
-            22 are interested
+            2200 are interested
         </small>
 
             </div>
@@ -1944,17 +1049,17 @@
         </div>
         <div class="media-story">
             <div class="media-title">
-                        <a href="/events/phoenix-pancakes-and-booze-art-show-2">Pancakes and Booze Art Show</a>
+                        <a href="/events/phoenix-pancakes-and-booze-art-show-2">this one isn't even about food</a>
 
             </div>
             <small>
-                    Friday, Nov 21, 8:00 pm
+                    wednesday 4:80pm
 
             </small>
             <div>
                 
         <small class="subtle-text">
-            11 are interested
+            no one is interested
         </small>
 
             </div>
@@ -1963,12 +1068,11 @@
 
                 </li>
         </ul>
-        <a class="link-more" href="/events">More Events</a>
     </div>
 
 
                             <div class="ywidget favorites">
-            <h3>Fresh Lists</h3>
+            <h3>not food</h3>
             <ul class="ylist">
                     <li>
                             <div class="media-block media-block-large clearfix">
@@ -1990,13 +1094,13 @@
         </div>
         <div class="media-story">
             <div class="media-title">
-                    <a href="/list/indian-and-pakistani-buffets-tempe-4">
-        Indian &amp; Pakistani Buffets!
+                    <a>
+        this isn't food
     </a>
 
             </div>
             <q>
-                In the mood for something a little different?  Here are the Valley&#39;s…
+                you don't need to worry about this
             </q>
         </div>
     </div>
@@ -2023,12 +1127,12 @@
         <div class="media-story">
             <div class="media-title">
                     <a href="/list/feed-yo-az-tempe-2">
-        Feed yo-AZ
+        maybe food
     </a>
 
             </div>
             <q>
-                Restaurants in Arizona that I give 4 or 5 stars
+                just kidding it's not actually food
             </q>
         </div>
     </div>
@@ -2055,25 +1159,25 @@
         <div class="media-story">
             <div class="media-title">
                     <a href="/list/uptown-midtown-that-place-that-isnt-downtown-phoenix">
-        Uptown/Midtown/that place that isn&#39;t downtown
+        inedible food thing
     </a>
 
             </div>
             <q>
-                Just some good ol&#39; places in a good ol&#39; neighborhood.
+                it doesn't count as food
             </q>
         </div>
     </div>
 
                     </li>
             </ul>
-            <a class="link-more" href="/list_search?location=Chandler%2C+AZ&amp;q=&amp;sort=time_updated">More Lists</a>
+            <a class="link-more">more not food</a>
         </div>
 
 
 
                         <div class="ysection clearfix">
-            <h3>Today in Talk</h3>
+            <h3>not food</h3>
             <ul class="ylist">
                     <li>
                             <div class="media-block media-block-large clearfix">
@@ -2096,11 +1200,11 @@
         <div class="media-story">
             <div class="media-title clearfix">
                     <a href="/topic/phoenix-welp-after-dark-2014-edition">
-        Welp After Dark (2014 Edition)...
+       definitely not food
     </a>
 
             </div>
-            <small>Humor & Offbeat</small>
+            <small>absolutely not food</small>
             <div class="subtle-text">
                 <small>9 minutes ago</small>
             </div>
@@ -2129,11 +1233,11 @@
         <div class="media-story">
             <div class="media-title clearfix">
                     <a href="/topic/scottsdale-post-dinner-date-ideas">
-        Post Dinner Date Ideas
+        only sometimes food
     </a>
 
             </div>
-            <small>Events</small>
+            <small>but probably not right now</small>
             <div class="subtle-text">
                 <small>20 minutes ago</small>
             </div>
@@ -2162,11 +1266,11 @@
         <div class="media-story">
             <div class="media-title clearfix">
                     <a href="/topic/scottsdale-best-calamari">
-        Best calamari
+       not food
     </a>
 
             </div>
-            <small>Food</small>
+            <small>not not not food</small>
             <div class="subtle-text">
                 <small>3 hours ago</small>
             </div>
@@ -2175,7 +1279,7 @@
 
                     </li>
             </ul>
-            <a class="link-more" href="/talk/chandler-az-us">More Talk</a>
+            <a class="link-more" href="/talk/chandler-az-us">more not food</a>
         </div>
 
 
@@ -2186,58 +1290,10 @@
 
 
 
-            <!-- google_ad_section_start(weight=ignore) -->
-<!-- <a href="/biz/outlook-autumn-market-fundamental-catwalk-flimsy-roost-legibility-individualism-grocer-predestination-8">welp</a> -->
-
-    <div class="footer">
-        <div class="footer-wrap">
-    <div class="footer-menu-wrap clearfix"
-
-                        <div class="footer-list directory lesser-text clearfix">
-            <span class="list-title">Site Map</span>
-            <ul>
-                    <li><a href="/atlanta">Atlanta</a></li>
-                    <li><a href="/austin">Austin</a></li>
-                    <li><a href="/boston">Boston</a></li>
-                    <li><a href="/chicago">Chicago</a></li>
-                    <li><a href="/dallas">Dallas</a></li>
-                    <li><a href="/denver">Denver</a></li>
-                    <li><a href="/detroit">Detroit</a></li>
-                    <li><a href="/honolulu">Honolulu</a></li>
-                    <li><a href="/houston">Houston</a></li>
-                    <li><a href="/la">Los Angeles</a></li>
-                    <li><a href="/miami">Miami</a></li>
-                    <li><a href="/minneapolis">Minneapolis</a></li>
-                    <li><a href="/nyc">New York</a></li>
-                    <li><a href="/philadelphia">Philadelphia</a></li>
-                    <li><a href="/portland">Portland</a></li>
-                    <li><a href="/sacramento">Sacramento</a></li>
-                    <li><a href="/san-diego">San Diego</a></li>
-                    <li><a href="/sf">San Francisco</a></li>
-                    <li><a href="/san-jose">San Jose</a></li>
-                    <li><a href="/seattle">Seattle</a></li>
-                    <li><a href="/dc">Washington, DC</a></li>
-                    <li><a href="/locations">More Cities</a></li>
-            </ul>
-        </div>
-
-            
-                <div class="city-landscape-img"></div>
-
-                <div class="footer-copyright">
-        <small>
-            Copyright © 2014 Welp.
-        </small>
-    </div>
-
-
-         </div>
-    </div>
-<!-- google_ad_section_end -->
-
-
-        </div> 
+       
 
 
     </body>
 </html>
+
+
