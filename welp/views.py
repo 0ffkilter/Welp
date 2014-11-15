@@ -61,7 +61,9 @@ def index():
 
 	return render_template('index.html', food_form = foodForm)
 
-
+@welp.route('/results', methods=['GET', 'POST'])
+def results():
+	return render_template('results.html')
 # @welp.route('/', methods=['GET'])
 # def food_prefs():
 # 	mehFoods = ""
@@ -76,9 +78,6 @@ def index():
 	# location = request.args.get('location')
 
 
-@welp.route('/results', methods=['GET', 'POST'])
-def results():
-	pass
 
 
 
