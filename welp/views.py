@@ -8,34 +8,81 @@ import time
 from welp import welp
 from forms import PreferencesForm
 
-foodPrefs = {'American':'meh', 'Chinese':'meh', 'Diner':'meh', 'Greek':'meh', 'Italian':'meh', 'Japanese':'meh', 'Traditional Norwegian':'meh', 'Mexican':'meh', 'Pizza':'meh', 'Thai':'meh', 'Indian':'meh'}
-terms = {'American':'tradamerican', 'Chinese':'chinese', 'Diner':'diners', 'Greek':'greek', 'Italian':'italian', 'Japanese':'japanese', 'Traditional Norwegian':'norwegian', 'Mexican':'mexican', 'Pizza':'pizza', 'Thai':'thai', 'Indian':'indpak'}
-mehFoods = ""
-location = []
+from werkzeug.contrib.cache import SimpleCache
 
-@welp.route('/')
+CACHE_TIMEOUT = 300
+
+cache = SimpleCache()
+
+class cached(object):
+
+    def __init__(self, timeout=None):
+        self.timeout = timeout or CACHE_TIMEOUT
+
+    def __call__(self, f):
+        def decorator(*args, **kwargs):
+            response = cache.get(request.path)
+            if response is None:
+                response = f(*args, **kwargs)
+                cache.set(request.path, response, self.timeout)
+            return response
+        return decorator
+
+@welp.route('/', methods=['GET', 'POST'])
 def index():
+	foodForm = PreferencesForm(csrf_enabled=False)
 	location = request.args.get('location')
-	print location
-	return render_template('index.html', foodPrefs=foodPrefs, location=location)
+	cache.set('location', location, timeout = 10 * 60)
+	if (request.method == "POST"):
+		lst = []
+		if (foodForm.indpak.data == "meh"):
+			lst += ["indpak"]
+		if (foodForm.greek.data == "meh"):
+			lst += ["greek"]
+		if (foodForm.thai.data == "meh"):
+			lst += ["thai"]
+		if (foodForm.tradamerican.data == "meh"):
+			lst += ["tradamerican"]
+		if (foodForm.italian.data == "meh"):
+			lst += ["italian"]
+		if (foodForm.norwegian.data == "meh"):
+			lst += ["norwegian"]
+		if (foodForm.mexican.data == "meh"):
+			lst += ["mexican"]
+		if (foodForm.chinese.data == "meh"):
+			lst += ["chinese"]
+		if (foodForm.japanese.data == "meh"):
+			lst += ["japanese"]
+		if (foodForm.pizza.data == "meh"):
+			lst += ["pizza"]
+		if (foodForm.diners.data == "meh"):
+			lst += ["diners"]
+		cache.set('foodChoices', lst, timeout = 10 * 60)
 
-@welp.route('/', methods=['POST'])
-def food_prefs():
-	mehFoods = ""
+	return render_template('index.html', food_form = foodForm)
 
-	for food, pref in foodPrefs.iteritems():
-		newPref = request.form[food]
-		foodPrefs[food] = newPref
-		if newPref == 'meh':
-			mehFoods += food
-			mehFoods += ' '
 
-	print mehFoods
+# @welp.route('/', methods=['GET'])
+# def food_prefs():
+# 	mehFoods = ""
+# 	for food, pref in foodPrefs.iteritems():
+# 		newPref = request.form[food]
+# 		foodPrefs[food] = newPref
+# 		if newPref == 'meh':
+# 			mehFoods += food
+# 			mehFoods += ' '
+
+# 	print mehFoods
 	# location = request.args.get('location')
-	return render_template('index.html', foodPrefs=foodPrefs, location=location)
 
 
-def main(): 
+@welp.route('/results', methods=['GET', 'POST'])
+def results():
+	pass
+
+
+
+def main():
 		locations = [(39.98,-82.98),(42.24,-83.61),(41.33,-89.13)]
 		api_calls = []
 		for lat, long in locations:
@@ -55,7 +102,7 @@ def get_search_parameters(lat, long):
 	return params
 
 def get_results(params):
-	consumer_key = "TwiZjmvAvrct4Xu6OxN49w" 
+	consumer_key = "TwiZjmvAvrct4Xu6OxN49w"
 	consumer_secret = "Ul7lj0H4wBdvPdY8Ci9eZkdI4tE"
 	token = "B93gZUtPLgD5KRc-IwBicN3qt30xUt2B"
 	token_secret = "p_gv7ofsb_LAfl-_u8hL30ezLrY"

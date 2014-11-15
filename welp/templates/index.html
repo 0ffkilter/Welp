@@ -1,9 +1,15 @@
-
+{% macro form_field(field, help=None) %}
+<div class="form-group{% if field.errors %} error{% endif %}">
+{{ field.label(class_='control-label') }}
+{{ field(class_='form-control') }}
+</div>
+{% endmacro %}
 <!DOCTYPE HTML>
     <head>
 
-
+<script src='{{ url_for('static', filename='js/main.js') }} '></script>
 <script type="text/javascript">
+
             
             window.yPageStart = new Date().getTime();
 </script>
@@ -77,48 +83,39 @@
     </ul>
 
     </div>
+</div>
 
-
-            </div>
 <div class="clearfix layout-block layout-a layout-border">
 <div class="column column-alpha main">
+    <form method="POST" action="{{ url_for('results') }}" role="form">
 
-                    <div class="ysection" id="signup-pitch" style="border: none; background: none;">
+    <div class="ysection" id="signup-pitch" style="border: none; background: none;">
         <div class="content">
             <h2 class="embossed-text-white">welp sometimes suggests places you might eat at.</h2>
             <p class="embossed-text-white">
                 people could maybe use welp to search for restaurants that have things like cooked food or water and sometimes bread. try it if you want.
             </p>
-            <a href="/signup" class="ybtn ybtn-primary ytype"><div style="position: relative; top: 85px; display: block; vertical-align: bottom; font-size: 80px;">food me</div></a>
+            <a href= class="ybtn ybtn-primary ytype">
+            <button type="submit"><div style="position: relative; top: 85px; display: block; vertical-align: bottom; font-size: 8px;">FOOD ME</div></button></a>
         </div>
     </div>
 
-<form action="{{ url_for('food_prefs') }}" method="POST" name="form">
-  <table style="width:50%">
-    <tr>
-      <td></td>
-      <td>Love it!</td>
-      <td>Meh.</td>
-      <td>Hate it!</td>
-    </tr>
-    {% for food, pref in foodPrefs.iteritems() %}
-      <tr>
-        <td>{{food}}</td>
-        <td><input type="radio" name={{food}} value="love"
-              {% if pref == "love" %}checked{% endif %}></td>
-        <td><input type="radio" name={{food}} value="meh"
-              {% if pref == "meh" %}checked{% endif %}></td>
-        <td><input type="radio" name={{food}} value="hate"
-              {% if pref == "hate" %}checked{% endif %}></td>
-      </tr>
-    {% endfor %}
-  </table>
-  <input type="submit">
-</form>
 
+    {{ form_field(food_form.indpak) }}
+    {{ form_field(food_form.greek) }}
+    {{ form_field(food_form.thai)}}
+    {{ form_field(food_form.tradamerican)}}
+    {{ form_field(food_form.italian)}}
+    {{ form_field(food_form.norwegian)}}
+    {{ form_field(food_form.mexican)}}
+    {{ form_field(food_form.chinese)}}
+    {{ form_field(food_form.japanese)}}
+    {{ form_field(food_form.diners)}}
 
-</div><div class="column column-beta sidebar">
+    </form>
+</div>
 
+<div class="column column-beta sidebar">
                         <div class="ysection clearfix rotd">
 <h2>welp digest</h2>
             <h3>review not about food</h3>
