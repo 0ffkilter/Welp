@@ -30,7 +30,8 @@ def food_prefs():
 			mehFoods += food
 			mehFoods += ' '
 
-	location = request.args.get('location')
+	print mehFoods
+	# location = request.args.get('location')
 	return render_template('index.html', foodPrefs=foodPrefs, location=location)
 
 

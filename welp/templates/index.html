@@ -93,7 +93,28 @@
         </div>
     </div>
 
-
+<form action="{{ url_for('food_prefs') }}" method="POST" name="form">
+  <table style="width:50%">
+    <tr>
+      <td></td>
+      <td>Love it!</td>
+      <td>Meh.</td>
+      <td>Hate it!</td>
+    </tr>
+    {% for food, pref in foodPrefs.iteritems() %}
+      <tr>
+        <td>{{food}}</td>
+        <td><input type="radio" name={{food}} value="love"
+              {% if pref == "love" %}checked{% endif %}></td>
+        <td><input type="radio" name={{food}} value="meh"
+              {% if pref == "meh" %}checked{% endif %}></td>
+        <td><input type="radio" name={{food}} value="hate"
+              {% if pref == "hate" %}checked{% endif %}></td>
+      </tr>
+    {% endfor %}
+  </table>
+  <input type="submit">
+</form>
 
 
 </div><div class="column column-beta sidebar">
