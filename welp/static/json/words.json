@@ -1,9 +1,25 @@
 words = {
   "nouns" : ["ambience", "service", "staff", "restaurant", "appearance"],
   1 : {
-    "food" : ["meh", "okay", "edible", "just alright"],
-    "service" : ["respectable", "so-so", "pretty good", "bearable"],
-    "other" : ["satisfactory", "fine", "alright", "acceptable"]
+    "nouns": ["The food I received looked okay, and it",
+              "My appetizer and meal", 
+              "When I ordered food I expected just a meal, and it",
+              "The food was of a reasonable price, and I found out why when it",
+              "Considering that I was at this restaurant, I certainly wasn't that suprised when the food that showed up",
+              "I didn't expect to get a world class meal, and I certainly wasn't suprised when my meal",
+              "I don't know why I came here, but it turned out to be okay because my food"],
+    "food" : ["meh...and probably nothing more than that",
+              "okay.  I don't think I can say more than that.", 
+              "edible.  Yeah, that describes it pretty well.", 
+              "just alright.  Okay, maybe it was a bit better than that, but I can't words right now."],
+    "service" : ["respectable.  Yeah, the service was respectable.",
+              "so-so.  Yeah, that's a good word for average",
+              "pretty good.  I suppose it was decent",
+              "bearable.  Nah, it was definitely better than that...maybe just a bit though."],
+    "other" : ["satisfactory.  I was certainly satisified.",
+              "fine.  It wasn't that type of fine, though.  You know what I mean.", 
+              "alright.  I'd say it was 100% average.",
+              "acceptable.  I'm not a food critic, but I'd maybe go there again."]
   },
   2 : {
     "food" : ["above average", "decent...nah it was better than decent actually"
