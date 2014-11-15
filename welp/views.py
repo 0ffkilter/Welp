@@ -105,7 +105,7 @@ def index():
 		cache.set('foodChoices', lst, timeout = 10 * 60)
 		locations = [(34.1100,-117.7197)] 
 		mehfoods = ['tradamerican', 'italian', 'chinese']
-		if len(mehfoods) = 0:
+		if len(mehfoods) == 0:
 			 mehfoods = ['tradamerican', 'italian', 'indpak', 'norwegian', 'greek','thai', 'mexican', 'chinese', 'japanese', 'pizza', 'diners']
 		api_calls = []
 		bizlist = []
