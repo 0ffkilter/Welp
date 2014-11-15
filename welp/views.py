@@ -1,12 +1,16 @@
 from flask import render_template
 from flask import jsonify
 
+<<<<<<< HEAD:app/views.py
 from app import app
 import rauth
 import time
 
+=======
+from welp import welp
+>>>>>>> 581aa39b07497f71b08b4e0d1892ee36fb512af1:welp/views.py
 
-@app.route('/')
+@welp.route('/')
 def index():
     return render_template('index.html')
 

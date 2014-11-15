@@ -1,0 +1,19 @@
+words = {
+  "nouns" : ["ambience", "service", "staff", "restaurant", "appearance"],
+  1 : {
+    "food" : ["meh", "okay", "edible", "just alright"],
+    "service" : ["respectable", "", "pretty good", "bearable"],
+    "other" : ["satisfactory", "fine", "alright", "acceptable"]
+  },
+  2 : {
+    "food" : ["above average", "decent...nah it was better than decent actually"
+              , "good but not great...but certainly better than okay", "better than slightly edible"],
+    "service" : ["decent", "fine", "good", "nice"],
+    "other" : ["bearable", "slightly above average", "better than the last restaurant I was at"],
+  },
+  3 : {
+    "food" : ["almost as good as a homecooked meal", "very good", "of extremely *high* quality"],
+    "service" : ["very nice to me", "definitely worth the tip", "definitely having a good time there"],
+    "other" : ["very nice...yes...verrrrryy nicee indeed", "overall of a high quality", "very appealing to me.  Would visit again"]
+  }
+}
