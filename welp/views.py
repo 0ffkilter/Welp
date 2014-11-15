@@ -54,7 +54,7 @@ def get_search_parameters(lat, long, foods):
 
 
 def get_results(params):
-	consumer_key = "TwiZjmvAvrct4Xu6OxN49w" 
+	consumer_key = "TwiZjmvAvrct4Xu6OxN49w"
 	consumer_secret = "Ul7lj0H4wBdvPdY8Ci9eZkdI4tE"
 	token = "B93gZUtPLgD5KRc-IwBicN3qt30xUt2B"
 	token_secret = "p_gv7ofsb_LAfl-_u8hL30ezLrY"
@@ -102,24 +102,22 @@ def index():
 			lst += ["pizza"]
 		if (foodForm.diners.data == "meh"):
 			lst += ["diners"]
-		cache.set('foodChoices', lst, timeout = 10 * 60)
-		locations = [(34.1100,-117.7197)] 
-		mehfoods = ['tradamerican', 'italian', 'chinese']
-		if len(mehfoods) == 0:
-			 mehfoods = ['tradamerican', 'italian', 'indpak', 'norwegian', 'greek','thai', 'mexican', 'chinese', 'japanese', 'pizza', 'diners']
+        if len(lst) == 0:
+			 lst = ['tradamerican', 'italian', 'indpak', 'norwegian', 'greek','thai', 'mexican', 'chinese', 'japanese', 'pizza', 'diners']
+		mehfoods = lst
 		api_calls = []
 		bizlist = []
 		nbizlist = []
 		n = len(mehfoods)
 		for x in range (0,n):
 			cat = mehfoods[x]
-			for lat, long in locations:
+			for lat, long in location:
 					params = get_search_parameters(lat, long, cat)
 					api_calls.append(get_results(params))
 					eateries = api_calls[x][u'businesses']#.sort(key=operator.itemgetter('rating'))
 					api_calls[x][u'businesses'] = reducer(eateries)
 					time.sleep(1.0)
-			
+
 			l = len(api_calls[x][u'businesses'])
 			bizlist.append(api_calls[x][u'businesses'])
 		h = len(bizlist)
@@ -127,8 +125,8 @@ def index():
 			nbizlist += bizlist[z]
 
 		nbizlist.sort(key=operator.itemgetter('distance'))
-
-	return render_template('index.html', food_form = foodForm)
+		cache.set( nbizlist, CACHE_TIMEOUT)
+	return render_template('index.html',  food_form = foodForm)
 
 @welp.route('/results', methods=['GET', 'POST'])
 def results():
