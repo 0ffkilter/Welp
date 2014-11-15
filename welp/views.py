@@ -1,19 +1,37 @@
 from flask import render_template
 from flask import jsonify
+from flask import request
 
-<<<<<<< HEAD:app/views.py
-from app import app
 import rauth
 import time
 
-=======
 from welp import welp
->>>>>>> 581aa39b07497f71b08b4e0d1892ee36fb512af1:welp/views.py
+from forms import PreferencesForm
+
+foodPrefs = {'American':'meh', 'Chinese':'meh', 'Diner':'meh', 'Greek':'meh', 'Italian':'meh', 'Japanese':'meh', 'Traditional Norwegian':'meh', 'Mexican':'meh', 'Pizza':'meh', 'Thai':'meh', 'Indian':'meh'}
+terms = {'American':'tradamerican', 'Chinese':'chinese', 'Diner':'diners', 'Greek':'greek', 'Italian':'italian', 'Japanese':'japanese', 'Traditional Norwegian':'norwegian', 'Mexican':'mexican', 'Pizza':'pizza', 'Thai':'thai', 'Indian':'indpak'}
+mehFoods = ""
+location = []
 
 @welp.route('/')
 def index():
-    return render_template('index.html')
+	location = request.args.get('location')
+	print location
+	return render_template('index.html', foodPrefs=foodPrefs, location=location)
 
+@welp.route('/', methods=['POST'])
+def food_prefs():
+	mehFoods = ""
+
+	for food, pref in foodPrefs.iteritems():
+		newPref = request.form[food]
+		foodPrefs[food] = newPref
+		if newPref == 'meh':
+			mehFoods += food
+			mehFoods += ' '
+
+	location = request.args.get('location')
+	return render_template('index.html', foodPrefs=foodPrefs, location=location)
 
 
 def main(): 
@@ -28,7 +46,7 @@ def main():
 
 def get_search_parameters(lat, long):
 	params = {}
-	params["term"] = "restaurants"
+	params["term"] = "restaurants " + mehFoods
 	params["ll"] = "{},{}".format(str(lat), str(long))
 	params["radius_filter"] = "2000"
 	params["limit"] = "10"
@@ -51,6 +69,8 @@ def get_results(params):
 
 	data = request.json()
 	session.close()
+
+	print data
 
 	return data
 
