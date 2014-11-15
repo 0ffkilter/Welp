@@ -1,4 +1,4 @@
 from flask import Flask
-app = Flask(__name__)
-app.config.from_object('app.config.Config')
-from app import views
+welp = Flask(__name__)
+welp.config.from_object('welp.config.Config')
+from welp import views

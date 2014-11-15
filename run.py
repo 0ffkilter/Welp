@@ -1,4 +1,4 @@
-from app import app
+from welp import welp
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    welp.run(debug=True)

@@ -1,7 +1,7 @@
 from flask import render_template
 
-from app import app
+from welp import welp
 
-@app.route('/')
+@welp.route('/')
 def index():
     return render_template('index.html')
