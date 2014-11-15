@@ -1,9 +1,9 @@
 function sendLocation(position) { 
     success = $.get(
 url="/",
-data = {location : [position.coords.latitude,position.coords.longitude]},
+data = {"location" : [position.coords.latitude,position.coords.longitude]},
 success = function(data) 
-{ alert('page content: ' + data);
+{ console.log("success!", position.coords.latitude, position.coords.longitude);
 }
 );
 
