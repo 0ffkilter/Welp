@@ -16,10 +16,17 @@ words = {
               "so-so.  Yeah, that's a good word for average",
               "pretty good.  I suppose it was decent",
               "bearable.  Nah, it was definitely better than that...maybe just a bit though."],
-    "other" : ["satisfactory.  I was certainly satisified.",
-              "fine.  It wasn't that type of fine, though.  You know what I mean.", 
-              "alright.  I'd say it was 100% average.",
-              "acceptable.  I'm not a food critic, but I'd maybe go there again."]
+    "other" : ["satisfactory.",
+              "fine.", 
+              "alright." ,
+              "acceptable."],
+    "extra" : ["I'd maybe go there again.",
+              "I acquired nutrients for a suitable amount of money.",
+              "At least I haven't vomited yet.",
+              "The menu doesn't leave much to the imagination.",
+              "The customer service wasn't great, but at least they were human.",
+              
+              ]
   },
   2 : {
     "food" : ["above average", "decent...nah it was better than decent actually"
