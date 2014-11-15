@@ -1,4 +1,4 @@
-function sendLocation(location) { 
+function sendLocation(position) { 
     success = $.get(
 url="/",
 data = {location : [position.coords.latitude,position.coords.longitude]},
